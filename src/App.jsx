@@ -1,18 +1,26 @@
-const App = () => {    return (
+const App = () => {
+    const odamlar = [
+        {
+            id:1,
+            name: 'John Doe',
+            age:22
+        },
+        {
+            id:2,
+            name: 'James KOok',
+            age:23
+        }
+    ]
+    return (
     <div>
-        <User name={"Husan"} age={20} />
+        {odamlar.map((qulpinisa)=>(
+            <ul key={qulpinisa.id}>
+                <li>Ismi : {qulpinisa.name}</li>
+                <li>Yoshi : {qulpinisa.age}</li>
+            </ul>
+        ))}
     </div>
 )
 }
-
-const User = ({name,age}) => {
-    return (
-        <>
-            <h1>My name is {name}</h1>
-            <h1>I am  {age} years old</h1>
-        </>
-    )
-}
-
 
 export default App
